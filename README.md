@@ -15,25 +15,30 @@ project/ ├── index.html # Main HTML file ├── styles.css # Styling fi
    cd project
 
 2. Set Up a Virtual Environment (Recommended)
+    ```bash
     python -m venv venv
+    
 Activate the virtual environment:
 
 Windows:
+
     .\\venv\\Scripts\\activate
 
 Mac/Linux:
+
     source venv/bin/activate
 
 3. Install Python dependencies:
-
+   ```bash
     cd api
+   
     pip install -r requirements.txt
 
-4. Run the backend:
-
+5. Run the backend:
+   ```bash
     python app.py
 
-5. Open index.html in your browser to access the UI.
+6. Open index.html in your browser to access the UI.
 
-6. Enter the data and get your prediction!
+7. Enter the data and get your prediction!
 
