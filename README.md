@@ -4,8 +4,19 @@ This project predicts an exam score based on user input. It uses a trained machi
 
 ## Structure
 
-project/ ├── index.html # Main HTML file ├── styles.css # Styling file ├── script.js # Frontend script ├── api/ # Backend API │ ├── app.py # Flask server │ ├── requirements.txt # Python dependencies ├── model/ # Trained model directory │ └── trained_model.pkl ├── static/ # Static assets │ └── fonts/ ├── README.md # Project documentation └── .gitignore # Ignore unnecessary files
-
+project/
+├── index.html          # Main HTML file for the frontend
+├── styles.css          # CSS for styling the frontend
+├── script.js           # JavaScript for frontend logic and API communication
+├── api/                # Backend API directory
+│   ├── app.py          # Flask application (backend server)
+│   ├── requirements.txt # List of Python dependencies
+├── model/              # Directory for the trained model
+│   └── trained_model.pkl # Saved machine learning model
+├── static/             # Static assets (e.g., fonts, images)
+│   └── fonts/          # Fonts used in the project
+├── README.md           # Documentation for the project
+└── .gitignore          # File to specify untracked files to ignore
 
 ## Setup and Run
 
