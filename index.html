@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>გამოცდის ქულის პროგნოზი</title>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-7xAA9BUuk3zv4Eo58/d2ehPGHruvM18um97gIPrltcd+u9QGDw/jkXNw3eoUf0K4SVv7NcuxMlPKZ1m5x7IFjw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
+  <!-- Google Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER with NAVBAR -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">
+        <h2><i class="fas fa-graduation-cap"></i> ExamScore</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#"><i class="fas fa-home"></i> მთავარი</a></li>
+        <li><a href="#howItWorks"><i class="fas fa-play-circle"></i> როგორ მუშაობს</a></li>
+        <li><a href="#predictionForm"><i class="fas fa-chart-line"></i> პროგნოზი</a></li>
+        <li><a href="#"><i class="fas fa-envelope-open-text"></i> კონტაქტი</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1><i class="fas fa-bullseye"></i> შეაფასეთ თქვენი გამოცდის ქულა!</h1>
+      <p>სწრაფად გაარკვიეთ, როგორ შეიძლება იმოქმედოთ თქვენს ყოველდღიურ ჩვევებზე დაყრდნობით.</p>
+      <a href="#predictionForm" class="hero-btn">დაიწყეთ აქ</a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="info-section" id="howItWorks">
+    <h2>როგორ მუშაობს</h2>
+    <div class="info-cards">
+      <div class="info-card">
+        <h3><i class="fas fa-user-edit"></i> 1. შეიყვანეთ მონაცემები</h3>
+        <p>ჩაწერეთ ინფორმაცია თქვენი სასწავლო ჩვევების, დასწრების, მოტივაციის და სხვა დეტალების შესახებ.</p>
+      </div>
+      <div class="info-card">
+        <h3><i class="fas fa-magic"></i> 2. დააჭირეთ &quot;პროგნოზს&quot;</h3>
+        <p>ჩვენი მანქანური სწავლის მოდელი დამუშავებას უკეთებს თქვენს ინფუთს და გთავაზობთ ქულის პროგნოზს.</p>
+      </div>
+      <div class="info-card">
+        <h3><i class="fas fa-chart-bar"></i> 3. ნახეთ შედეგები</h3>
+        <p>მიიღეთ სავარაუდო ქულა მყისიერად და გამოიყენეთ ეს ინფორმაცია სწავლის სტრატეგიის დასაგეგმარებლად!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: FORM & RESULTS -->
+  <main class="content-wrapper">
+    <!-- FORM SECTION -->
+    <section class="form-section" id="predictionForm">
+      <h2>შეიყვანეთ თქვენი მონაცემები</h2>
+      <form id="predictionFormEl" onsubmit="return false;">
+        <div class="form-grid">
+          <!-- 1) Daily Hours Study -->
+          <div class="form-group">
+            <label for="dailyHoursStudy">ყოველდღიური სასწავლო საათები</label>
+            <input type="number" step="0.1" id="dailyHoursStudy" name="dailyHoursStudy" required>
+          </div>
+
+          <!-- 2) Attendance -->
+          <div class="form-group">
+            <label for="attendance">დასწრება</label>
+            <select id="attendance" name="attendance" required>
+              <option value="">აირჩიეთ</option>
+              <option value="High">მაღალი</option>
+              <option value="Medium">საშუალო</option>
+              <option value="Low">დაბალი</option>
+            </select>
+          </div>
+
+          <!-- 3) Resources Access -->
+          <div class="form-group">
+            <label for="resourcesAccess">რესურსებზე წვდომა</label>
+            <select id="resourcesAccess" name="resourcesAccess" required>
+              <option value="">აირჩიეთ</option>
+              <option value="Yes">კი</option>
+              <option value="No">არა</option>
+            </select>
+          </div>
+
+          <!-- 4) Extracurricular Activities -->
+          <div class="form-group">
+            <label for="extracurricularActivities">დამატებითი აქტივობები</label>
+            <select id="extracurricularActivities" name="extracurricularActivities" required>
+              <option value="">აირჩიეთ</option>
+              <option value="Yes">კი</option>
+              <option value="No">არა</option>
+            </select>
+          </div>
+
+          <!-- 5) Sleep Hours -->
+          <div class="form-group">
+            <label for="sleepHours">ძილის საათები</label>
+            <input type="number" step="0.1" id="sleepHours" name="sleepHours" required>
+          </div>
+
+          <!-- 6) Motivation Level -->
+          <div class="form-group">
+            <label for="motivationLevel">მოტივაციის დონე</label>
+            <select id="motivationLevel" name="motivationLevel" required>
+              <option value="">აირჩიეთ</option>
+              <option value="High">მაღალი</option>
+              <option value="Medium">საშუალო</option>
+              <option value="Low">დაბალი</option>
+            </select>
+          </div>
+
+          <!-- 7) Have a Job -->
+          <div class="form-group">
+            <label for="haveAJob">სამუშაო</label>
+            <select id="haveAJob" name="haveAJob" required>
+              <option value="">აირჩიეთ</option>
+              <option value="Yes">კი</option>
+              <option value="No">არა</option>
+            </select>
+          </div>
+
+          <!-- 8) Teacher Quality -->
+          <div class="form-group">
+            <label for="teacherQuality">პედაგოგის ხარისხი</label>
+            <select id="teacherQuality" name="teacherQuality" required>
+              <option value="">აირჩიეთ</option>
+              <option value="High">მაღალი</option>
+              <option value="Medium">საშუალო</option>
+              <option value="Low">დაბალი</option>
+              <option value="Average">სტანდარტული</option>
+            </select>
+          </div>
+
+          <!-- 9) School Type -->
+          <div class="form-group">
+            <label for="schoolType">სკოლის ტიპი</label>
+            <select id="schoolType" name="schoolType" required>
+              <option value="">აირჩიეთ</option>
+              <option value="State">სახელმწიფო</option>
+              <option value="Private">კერძო</option>
+            </select>
+          </div>
+
+          <!-- 10) Interest For Subject -->
+          <div class="form-group">
+            <label for="interestForSubject">ინტერესის დონე საგნის მიმართ</label>
+            <select id="interestForSubject" name="interestForSubject" required>
+              <option value="">აირჩიეთ</option>
+              <option value="High">მაღალი</option>
+              <option value="Medium">საშუალო</option>
+              <option value="Low">დაბალი</option>
+            </select>
+          </div>
+
+          <!-- 11) Distance from Home -->
+          <div class="form-group">
+            <label for="distanceFromHome">მანძილი სახლიდან</label>
+            <select id="distanceFromHome" name="distanceFromHome" required>
+              <option value="">აირჩიეთ</option>
+              <option value="Near">ახლო</option>
+              <option value="Moderate">საშუალო</option>
+              <option value="Far">შორს</option>
+            </select>
+          </div>
+
+          <!-- 12) Self Rating Student -->
+          <div class="form-group">
+            <label for="selfRatingStudent">თვითშეფასება</label>
+            <select id="selfRatingStudent" name="selfRatingStudent" required>
+              <option value="">აირჩიეთ</option>
+              <option value="High">მაღალი</option>
+              <option value="Medium">საშუალო</option>
+              <option value="Low">დაბალი</option>
+              <option value="Average">სტანდარტული</option>
+            </select>
+          </div>
+
+          <!-- 13) Learning Language -->
+          <div class="form-group">
+            <label for="learningLanguage">სასწავლო ენა</label>
+            <select id="learningLanguage" name="learningLanguage" required>
+              <option value="">აირჩიეთ</option>
+              <option value="Foreign">უცხოური</option>
+              <option value="MotherLanguage">მშობლიური</option>
+            </select>
+          </div>
+
+          <!-- 14) Number of Subjects -->
+          <div class="form-group">
+            <label for="numberOfSubjects">საგნების რაოდენობა</label>
+            <input type="number" id="numberOfSubjects" name="numberOfSubjects" required>
+          </div>
+
+          <!-- 15) Time Spent on Social Media -->
+          <div class="form-group">
+            <label for="timeSpentSocialMedia">სოციალურ მედიაში დახარჯული დრო (სთ)</label>
+            <input type="number" step="0.1" id="timeSpentSocialMedia" name="timeSpentSocialMedia" required>
+          </div>
+
+          <!-- 16) Mental Health Condition -->
+          <div class="form-group">
+            <label for="mentalHealthCondition">მენტალური ჯანმრთელობის მდგომარეობა</label>
+            <select id="mentalHealthCondition" name="mentalHealthCondition" required>
+              <option value="">აირჩიეთ</option>
+              <option value="Good">კარგი</option>
+              <option value="Average">საშუალო</option>
+              <option value="Bad">ცუდი</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- PREDICT BUTTON -->
+        <div class="button-group">
+          <button type="submit" class="predict-btn" onclick="predictExamScore()">
+            <i class="fas fa-magnifying-glass-chart"></i> პროგნოზი
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- RESULT SECTION -->
+    <section class="result-section" id="resultSection">
+      <h2>პროგნოზირებული გამოცდის ქულა</h2>
+      <div id="predictionResult" class="result-box">--</div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <p>© 2025 ExamScore. ყველა უფლება დაცულია.</p>
+      <p><i class="fas fa-heart"></i> შექნილი თქვენთვის, უკეთესი შედეგების მისაღებად.💖</p>
+    </div>
+  </footer>
+
+  <!-- OPTIONAL JAVASCRIPT -->
+  <script>
+    async function predictExamScore() {
+      // 1) Gather form data
+      const form = document.getElementById('predictionFormEl');
+      const formData = new FormData(form);
+
+      // 2) Convert to object (to send as JSON)
+      const dataObj = {};
+      formData.forEach((value, key) => {
+        dataObj[key] = value;
+      });
+
+      // 3) Make call to your ML API endpoint (placeholder)
+      try {
+        const response = await fetch('YOUR_API_ENDPOINT', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(dataObj),
+        });
+        
+        const result = await response.json();
+
+        // 4) Display the prediction
+        document.getElementById('predictionResult').textContent = result.predictedScore;
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('predictionResult').textContent = 'პროგნოზის დროს შეცდომა';
+      }
+    }
+  </script>
+
+</body>
+</html>

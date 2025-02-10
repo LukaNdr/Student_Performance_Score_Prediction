@@ -1,0 +1,235 @@
+/* 1) RESET & BASIC STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Smooth gradient background across the entire site */
+  background: linear-gradient(to right, #74ABE2, #5563DE);
+  color: #fff;
+}
+
+/* 2) NAVBAR & HEADER */
+.main-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  font-size: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+/* 3) HERO SECTION */
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.hero-btn {
+  background: #fff;
+  color: #333;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.hero-btn:hover {
+  background: #ddd;
+}
+
+/* 4) INFO (HOW IT WORKS) SECTION */
+.info-section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 3rem;
+}
+
+.info-card {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #f2f2f2;
+}
+
+/* 5) MAIN CONTENT WRAPPER */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* FORM SECTION */
+.form-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* GRID for the form */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Each input group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels & Inputs */
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Predict Button */
+.button-group {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.predict-btn {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.predict-btn:hover {
+  background-color: #ddd;
+}
+
+/* RESULT SECTION */
+.result-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.result-section h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.result-box {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* FOOTER */
+.main-footer {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin: 0.3rem 0;
+}
